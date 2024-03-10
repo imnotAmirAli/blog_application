@@ -1,8 +1,8 @@
 class SearchController < ApplicationController
   def index
 
-     @q = Post.ransack(params[:q])
-     @posts = @q.result(distinct: true)
+     @query = Post.ransack(params[:q])
+     @posts = @query.result(distinct: true)
   
   end
 end
