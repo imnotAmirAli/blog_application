@@ -10,8 +10,8 @@
 
 User.create(email: "dean@example.com", name:"dean", password: "password", password_confirmation: "password")
 User.create(email: "amiralihe.ah@gmail.com", name:"amirali", password: "password", password_confirmation: "password")
-User.create(email: "jane@doe.com", name:"jane", password: "password", password_confirmation: "password")
+# User.create(email: "jane@doe.com", name:"jane", password: "password", password_confirmation: "password")
 
-4.times do |x|
+3.times do |x|
     Post.create(title: "Title #{x}", body: "Body #{x} words go here idk", user_id: User.first.id)
 end

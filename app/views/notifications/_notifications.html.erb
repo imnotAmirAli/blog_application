@@ -1,0 +1,12 @@
+<% if current_user %>
+
+<%= link_to notifications_path, class: "badge-link" do %>
+  <span class="badge rounded-pill bg-danger">
+    <%= @unread >= 9 ? "9+" : @unread %>
+    <i class="bi bi-suit-heart-fill"></i>
+  </span>
+<% end %>
+
+
+
+<% end %>

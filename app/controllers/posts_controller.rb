@@ -11,6 +11,9 @@ class PostsController < ApplicationController
   def show
     @post.update(views: @post.views + 1)
     @comments = @post.comments.order(created_at: :desc)
+
+#    @notification = Noticed::Notification.where(recipient_id: params[:recipient_id], event_id: params[:event_id])
+#    @notification.mark_as_read
   end
 
   # GET /posts/new
@@ -71,4 +74,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body)
     end
-end
+  end

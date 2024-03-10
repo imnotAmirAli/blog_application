@@ -1,0 +1,12 @@
+<h1>Notifications</h1>
+
+<ul>
+    notifs: <%= @unread %> <br />
+    <% @notifications.unread.each do |notification| %>
+    
+        <%= render 'notifications/notification', notification: notification %>
+        
+        
+    
+    <% end %>
+</ul>
